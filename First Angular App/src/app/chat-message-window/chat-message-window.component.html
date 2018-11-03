@@ -1,0 +1,20 @@
+<div *ngFor="let message of messages" class="row">
+  <div *ngIf = "message.messageSide === 'client'" class="messages-div__messages">
+    <div class="messages__message-pic-div">
+      <img src="../../assets/science.png" alt="dp" class="message-pic-div__pic">
+    </div>
+    <div class="messages__message-text-div">
+      <div class="message-text-div__text">{{ message.messageText }}</div>
+      <div class="messages-div__time">01:45</div>
+    </div>
+  </div>
+  <div *ngIf = "message.messageSide === 'server'" class="messages-div__messages-server">
+    <div class="messages__message-pic-div">
+      <img src="../../assets/bot.png" alt="dp" class="message-pic-div__pic">
+    </div>
+    <div class="messages__message-text-div-server">
+      <div class="message-text-div__text">{{ message.messageText }}</div>
+      <div class="messages-div__time">01:45</div>
+    </div>
+  </div>
+</div>

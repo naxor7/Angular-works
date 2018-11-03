@@ -1,0 +1,19 @@
+<div class="col-sm-12 chatapp-container__type-window">
+  <div class="type-window__outer-div">
+    <div class="outer-div__camera">
+      <input type="file" name="photo" ng2FileSelect [uploader]="uploader" class="camera__upload" />
+      <i class="fas fa-camera"></i>
+    </div>
+    <div class="outer-div__message-text">
+      <input [value]="currentMessage" (input)="currentMessage = $event.target.value" type="text" name="message"
+        placeholder="Type Something" class="message-text__message-area" id="message-text">
+    </div>
+    <div class="outer-div__record">
+      <i class="fas fa-microphone"></i>
+    </div>
+    <!-- <div class="outer-div__send" id="send-button" (click)="sendMessage()"> -->
+    <div class="outer-div__send" id="send-button" (click)="uploader.uploadAll()">
+      <i class="fas fa-arrow-right"></i>
+    </div>
+  </div>
+</div>
